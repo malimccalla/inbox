@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --watch"
   },
   "dependencies": {
     "ganache-cli": "^6.0.3",
