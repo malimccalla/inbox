@@ -28,4 +28,10 @@ describe('Inbox', () => {
     const message = await inbox.methods.message().call();
     assert.equal(message, 'Hi there');
   });
+
+  it('can set a message', async () => {
+    await inbox.methods.setMessage('Bye there').send({ from: coinbase });
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'Bye there');
+  });
 });
